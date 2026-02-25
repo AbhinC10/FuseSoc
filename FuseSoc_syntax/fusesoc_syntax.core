@@ -1,0 +1,19 @@
+CAPI=2:
+
+name: vendorname:library:blockname:version
+  filesets:
+    rtl:
+      - rtl/file1.sv
+      - rtl/file2.sv
+    file_type: systemVerilogSource
+    tb:
+      - tb/file1.sv
+      - tb/file2.sv
+    file_type: systemVerilogSource
+
+  targets:
+    sim:
+      filesets:
+        - rtl
+        - tb
+      default_tool: verilator
